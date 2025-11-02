@@ -1,0 +1,34 @@
+{
+  "name": "enhanced-chrome-file-manager",
+  "version": "1.0.0",
+  "description": "Enhanced MCP server with Chrome DevTools and comprehensive file management capabilities",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": "./build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node build/index.js",
+    "dev": "tsx watch src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.19.1",
+    "puppeteer-core": "24.23.0",
+    "yargs": "18.0.0",
+    "glob": "^10.3.10",
+    "fs-extra": "^11.2.0",
+    "chokidar": "^3.6.0",
+    "mime-types": "^2.1.35"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.3",
+    "@types/yargs": "^17.0.33",
+    "@types/fs-extra": "^11.0.4",
+    "@types/mime-types": "^2.1.4",
+    "typescript": "^5.9.2",
+    "tsx": "^4.7.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

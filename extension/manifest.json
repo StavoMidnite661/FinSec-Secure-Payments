@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "FinSec Secure Payments",
+  "version": "0.1.0",
+  "description": "A secure, compliant extension for initiating payments.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "notifications",
+    "identity"
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "https://*.merchant-a.com/checkout/*",
+    "https://checkout.merchant-b.com/*",
+    "https://www.instacart.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.merchant-a.com/checkout/*",
+        "https://checkout.merchant-b.com/*",
+        "https://www.instacart.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src http://localhost:3000 https://api.sovr.com ws://localhost:3000;"
+  },
+  "oauth2": {
+    "client_id": "667355691357-8930o9lgpfilm11l8h3uuquvel62dqu1.apps.googleusercontent.com",
+    "scopes": [
+      "openid",
+      "email",
+      "profile"
+    ]
+  }
+}

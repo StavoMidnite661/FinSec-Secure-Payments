@@ -1,0 +1,56 @@
+{
+  "mcpServers": {
+    "stripe": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@stripe/mcp",
+        "--tools=all",
+        "--api-key=sk_test_51RWRACRbFaKzlD27C5Lms9k1pKc88WeYokddjg77juxh4mH6FcjPiJZFElrUEWGAd9BbkOJ852eNljZmFveICt5v00KaXUblWJ"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "env": {
+        "DEFAULT_MINIMUM_TOKENS": ""
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "D:GMConsul"
+      ]
+    },
+    "browserbase": {
+      "command": "npx",
+      "args": [
+        "@browserbasehq/mcp"
+      ],
+      "env": {
+        "BROWSERBASE_API_KEY": "bb_live_HRp8zws-ngyO1Lte10iSeoWfgeg",
+        "BROWSERBASE_PROJECT_ID": "9c5c88e6-8eb0-44bd-a435-f14a53100f52"
+      }
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ]
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest"]
+    },
+    "enhanced-chrome-file-manager": {
+      "command": "node",
+      "args": ["mcp_server/enhanced-chrome-file-manager/build/index.js"]
+    }
+  }
+}
