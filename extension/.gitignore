@@ -13,7 +13,5 @@ node_modules/
 npm-debug.log
 yarn-error.log
 
-#-*- mode: gitignore -*-
-
-backend/.env
+#-*
 backend/.env
