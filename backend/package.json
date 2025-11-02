@@ -1,0 +1,38 @@
+{
+  "name": "payment-processor-template",
+  "version": "1.0.0",
+  "description": "Modular backend template for SOVR processing and Stripe integration",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "cross-env PORT=3000 nodemon src/app.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SOVR",
+    "Stripe",
+    "payment",
+    "backend",
+    "template"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.901.0",
+    "@types/jsonwebtoken": "^9.0.10",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.15.0",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "stripe": "^14.25.0",
+    "web3": "^4.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "cross-env": "^10.1.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

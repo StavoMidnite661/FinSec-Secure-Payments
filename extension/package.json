@@ -1,0 +1,15 @@
+{
+  "name": "finsec-chrome-extension",
+  "version": "1.0.0",
+  "description": "A revolutionary new utility to bridge the gap between the traditional web and the decentralized future.",
+  "scripts": {
+    "build": "rm -rf public && mkdir public && cp manifest.json background.js content.js content.css firebase.json public/ && cp -r popup icons public/"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0"
+  }
+}

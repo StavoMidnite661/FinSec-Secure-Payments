@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FinSec Secure Payments</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>FinSec Payments</h1>
+    <div id="auth-section">
+      <p>Log in to start making secure payments.</p>
+      <button id="loginButton">Log In</button>
+    </div>
+    <div id="user-section" style="display:none;">
+      <p>Welcome, <span id="userEmail"></span>!</p>
+      <button id="logoutButton">Log Out</button>
+    </div>
+    <hr id="separator" style="display:none;"/>
+    <div id="payment-section" style="display:none;" >
+      <h2>Confirm Payment</h2>
+      <p>Merchant: <span id="merchantName"></span></p>
+      <p>Amount: <span id="paymentAmount"></span> <span id="paymentCurrency"></span></p>
+      <button id="payButton">Pay Now</button>
+      <p id="statusMessage"></p>
+    </div>
+    <div id="history-section" style="display:none;">
+      <h2>Transaction History</h2>
+      <ul id="transactionList">
+        <!-- Transaction items will be dynamically added here -->
+      </ul>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

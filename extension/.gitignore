@@ -1,0 +1,18 @@
+# IDE - General
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build artifacts
+build/
+dist/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+#-*- mode: gitignore -*-
+
+backend/.env
